@@ -1,0 +1,247 @@
+$lineGreen:rgb(118, 187, 117);
+$backGreen:rgb(159, 249, 157);
+$backGray: lightgray;
+$boxBorderRadius: 5px;
+$boxBorderLineWidth: 2px;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgba(247, 247, 247, 0.896);
+}
+
+hr {
+    border-width: 2px 0 0 0; 
+    border-color: $lineGreen;
+}
+
+p {
+    margin: 10px auto;
+}
+
+#container {
+    text-align: center;
+}
+
+#header {
+    background-image: url("./img/header.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 30vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: white;
+        font-size: 3em;
+    }
+}
+
+#menu {
+
+    table {
+        width: 90%;
+        margin: 20px auto 40px auto;
+        border-collapse: collapse;
+        table-layout: fixed;
+
+        a {
+            color: black;
+            padding: 5px;
+            font-size: 1.0em;
+            cursor: pointer;
+        }
+    }
+}
+
+.content-box {
+    margin: 50px auto;    
+
+    .title {
+        p {
+            margin-bottom: 0px;
+            font-size: 1.1em;
+        }
+
+        h1 {
+            margin: 0 auto;
+        }
+    }
+}
+
+#profile {
+    table {
+        margin: 20px auto;
+        text-align: left;
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+
+    td {
+        padding: 10px 15px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+
+        &:nth-child(1) {
+            min-width: 150px;
+            background-color: $backGray;
+        }
+
+        &:nth-child(2) {
+            min-width: 300px;
+        }
+    
+    }
+
+
+
+}
+
+#career {
+
+    .career-box {
+        margin: 20px auto;
+        padding: 5px;
+        border: $boxBorderLineWidth solid $lineGreen;
+        border-radius: $boxBorderRadius;
+        width: 60%;
+
+        div {
+            margin: 10px;
+        }
+
+        .year {
+            line-height: 20px;
+            margin-right: 50px;
+        }
+
+        .belonging {
+            line-height: 30px;
+            font-weight: bold;
+            font-size: large;
+        }
+    }
+}
+
+#technique {
+
+    .tech-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;     
+        flex-flow: row wrap;   
+
+        .tech-box {
+            margin: 10px;
+            padding: 5px;
+            // border: $boxBorderLineWidth solid $lineGreen;
+            // border-radius: $boxBorderRadius;
+            // width: 800px;
+
+            p {
+                font-weight: bold;
+                font-size: large;
+            }
+
+            table {
+                text-align: left;
+                margin: 10px auto;
+                border-collapse: collapse;
+
+                tr {
+                    height: 10px;
+                }
+
+                td {
+                    padding: 10px;
+                    text-align: left;
+                    border-top: 1px solid black;
+                    border-bottom: 1px solid black;
+
+                    &:nth-child(1) {
+                        text-align:center;
+                        width: 200px;
+                        background-color: $backGray;
+                    }
+                    &:nth-child(2) {
+                        text-align:center;
+                        width: 50px;
+                    }
+                    &:nth-child(3) {
+                        text-align:left;
+                        width: 400px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+#others {
+
+    .others-acd {
+        margin: auto;
+        width: 60%;
+        list-style: none;
+        padding-left: 0px;
+
+        li {
+            margin: 10px 0;
+        }    
+    }
+
+    .acd-content {
+        max-height: 0;
+        min-height: 0;
+        overflow-y: hidden;
+        transition: max-height 0.3s ease;
+
+        ul {
+            margin: 0px auto;
+            text-align: left;
+            max-width: 30%;
+        }
+
+    }
+
+    #research {
+        ul {
+            margin: 0px auto;
+            text-align: left;
+            max-width: 80%;
+        }
+
+    }
+
+    .acd-title{
+        padding: 5px 5px;
+        margin: 0;
+        border: 2px solid $lineGreen;
+        border-radius: $boxBorderRadius;
+        position: relative;
+        cursor :pointer;
+    }
+
+    .acd-title::before{
+        content: "＋";
+        position: absolute;
+        right: 10px;
+    }
+
+    .acd-title.open {
+
+        + .acd-content{
+            max-height: 1000px;
+        }
+
+        &::before{
+            content: "－";
+        }    
+    }
+} 

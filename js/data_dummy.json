@@ -1,0 +1,93 @@
+{
+    "profile":[
+        {
+            "title": "氏名",
+            "content":"xxxxxx"
+        },
+        {
+            "title": "生年月日",
+            "content":"xxxxx年x月xx日"
+        },
+        {
+            "title": "メールアドレス",
+            "content":"xxxxxxxxxxxx"
+        }
+    ],
+
+    "technique":[
+        {
+            "name":"frontend",
+            "items":[
+            {
+                "title":"html",
+                "year": "1年",
+                "content":"hogehoge"
+            },
+            {
+                "title":"css",
+                "year": "(0年)",
+                "content":"hogehoge"
+            },
+            {
+                "title":"javascript",
+                "year": "1年",
+                "content":"hogehoge"
+            }
+            ]
+        },
+        {
+            "name":"backend",
+            "items":[
+                {
+                    "title":"Java",
+                    "year": "1年",
+                    "content":"hogehoge"
+                },
+                {
+                    "title":"Python",
+                    "year": "1年",
+                    "content":"hogehoge"
+                },
+                {
+                    "title":"Node.js",
+                    "year": "1年",
+                    "content":"hogehoge"
+                }
+            ]
+        }
+    ],
+
+    "career": [
+        {
+            "year":"xxxx/xx - xxxx/xx",
+            "title":"AAAAAAAAAAAA",
+            "content":"hogehoge"
+        },
+        {
+            "year":"xxxx/xx - xxxx/xx",
+            "title":"AAAAAAAAAAAA",
+            "content":"hogehoge"
+        }
+    ],
+    
+    "research": [
+        {
+            "name": "name1",
+            "items": [
+                "hogehoge",
+                "hogehoge"    
+            ]
+        }
+    ],
+
+    "account": [
+        "hogehoge",
+        "hogehoge"
+    ],
+
+    "certification": [
+        "基本情報技術者",
+        "応用情報技術者"
+    ]
+
+}

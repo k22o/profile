@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Profile</title>
+</head>
+<body>
+    <div id="container">
+        
+        <div id="header">
+            <h1>My PortFolio</h1>
+        </div>
+        <div id="menu">
+            <table>
+                <tr>
+                    <td><a href="#profile">自己紹介</a></td>
+                    <td><a href="#career">経歴</a></td>
+                    <td><a href="#technique">技術</a></td>
+                    <td><a href="#others">その他</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="main">
+            <div id="profile" class="content-box">
+                <div class="title">
+                    <p>Profile</p>
+                    <h1>自己紹介</h1>
+                </div>
+                <table class="profile-table">
+                    <tr v-for="item in items">
+                        <td> {{ item.title }} </td>
+                        <td> {{ item.content }} </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="career" class="content-box">
+                <div class="title">
+                    <p>Career</p>
+                    <h1>経歴</h1>
+                </div>
+                <div class="career-content">
+                    <div class="career-box" v-for="item in items">
+                        <div>
+                            <span class="year"> {{ item.year }} </span>
+                            <span class="belonging"> {{ item.title }} </span>
+                        </div>
+                        <hr>
+                        <div class="detail"><p> {{ item.content }} </p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="technique" class="content-box">
+                <div class="title">
+                    <p>Technique</p>
+                    <h1>技術スタック</h1>
+                </div>
+                <div class="tech-content">
+                    <div class="tech-box" v-for="category in categories">
+                        <p> {{ category.name }} </p>
+                        <table>
+                            <tr v-for="item in category.items">
+                                <td> {{ item.title }} </td>
+                                <td> {{ item.year }} </td>
+                                <td> {{ item.content }} </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="others" class="content-box">
+                <div class="title">
+                    <p>others</p>
+                    <h1>その他</h1>
+                </div>
+
+                <ul class="others-acd">
+                    <li id="certification">
+                        <h4 class="acd-title">保有資格</h3>
+                        <div class="acd-content">
+                            <ul id="certification-list">
+                                <li v-for="item in items">{{ item }}</li>
+                            </ul>                                
+                        </div>
+                    </li>
+                    <li id="account">
+                        <h4 class="acd-title">各種アカウント</h3>
+                        <div class="acd-content">
+                            <ul id="account-list">
+                                <li v-for="item in items"> {{ item }} </li>
+                            </ul>                                
+                        </div>
+                    </li>
+                    <li id="research">
+                        <h4 class="acd-title">業績</h3>
+                        <div class="acd-content">
+                            <div id="research-acd-contents">
+                                <div v-for="category in categories">
+                                    <p> {{ category.name }} </p>
+                                    <ul><li v-for="item in category.items"> {{ item }} </li></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/utility.js" type="text/javascript"></script>
+    <script src="./js/main.js" type="text/javascript"></script>
+</body>
