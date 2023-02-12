@@ -26,7 +26,7 @@ const profile = Vue.createApp({
             jsonData.then((res) => commonFunctions.createList(this.items, res.profile))   
         } 
     }
-}).mount('.profile-table')
+}).mount('.profile__table')
 .createList
 
 
@@ -41,7 +41,7 @@ const career = Vue.createApp({
             jsonData.then((res) => commonFunctions.createList(this.items, res.career))   
         } 
     }
-}).mount('.career-content')
+}).mount('.career__content')
 .createList
 
 
@@ -56,7 +56,7 @@ const technique = Vue.createApp({
             jsonData.then((res) => commonFunctions.createList(this.categories, res.technique))   
         } 
     }
-}).mount('.tech-content')
+}).mount('.tech__content')
 .createList
 
 

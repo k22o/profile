@@ -1,30 +1,13 @@
 @charset "UTF-8";
-html {
-  scroll-behavior: smooth;
+a {
+  text-decoration: none;
 }
 
-body {
-  background-color: rgba(247, 247, 247, 0.896);
-}
-
-hr {
-  border-width: 2px 0 0 0;
-  border-color: #76bb75;
-}
-
-p {
-  margin: 10px auto;
-}
-
-#container {
-  text-align: center;
-}
-
-#header {
-  background-image: url("./img/header.jpg");
+.headerTitle {
+  background-image: url("../img/header.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  height: 30vh;
+  height: 15vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -37,39 +20,67 @@ p {
           align-items: center;
 }
 
-#header h1 {
+.headerTitle h1 {
   color: white;
   font-size: 3em;
 }
 
-#menu table {
+.menu table {
   width: 90%;
   margin: 20px auto 40px auto;
   border-collapse: collapse;
   table-layout: fixed;
 }
 
-#menu table a {
+.menu table a {
   color: black;
   padding: 5px;
   font-size: 1.0em;
   cursor: pointer;
 }
 
-.content-box {
+footer {
+  background-color: black;
+  text-align: center;
+  color: white;
+  height: 30px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgba(247, 247, 247, 0.896);
+  margin: 0;
+}
+
+p {
+  margin: 10px auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  text-align: center;
+}
+
+.contentBox {
   margin: 50px auto;
 }
 
-.content-box .title p {
+.contentBox .title p {
   margin-bottom: 0px;
   font-size: 1.1em;
 }
 
-.content-box .title h1 {
+.contentBox .title h2 {
   margin: 0 auto;
 }
 
-#profile table {
+#profile .profile__table {
   margin: 20px auto;
   text-align: left;
   border-collapse: collapse;
@@ -91,7 +102,12 @@ p {
   min-width: 300px;
 }
 
-#career .career-box {
+#career hr {
+  border-width: 2px 0 0 0;
+  border-color: #76bb75;
+}
+
+#career .career__box {
   margin: 20px auto;
   padding: 5px;
   border: 2px solid #76bb75;
@@ -99,88 +115,85 @@ p {
   width: 60%;
 }
 
-#career .career-box div {
+#career .career__box div {
   margin: 10px;
 }
 
-#career .career-box .year {
+#career .career__box .year {
   line-height: 20px;
   margin-right: 50px;
 }
 
-#career .career-box .belonging {
+#career .career__box .belonging {
   line-height: 30px;
   font-weight: bold;
   font-size: large;
 }
 
-#technique .tech-content {
+#career .career__box .detail {
+  text-align: left;
+}
+
+#tech .tech__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-#technique .tech-content .tech-box {
+#tech .tech__content .tech__box {
   margin: 10px;
   padding: 5px;
+  max-width: 100%;
 }
 
-#technique .tech-content .tech-box p {
+#tech .tech__content .tech__box p {
   font-weight: bold;
   font-size: large;
 }
 
-#technique .tech-content .tech-box table {
+#tech .tech__content .tech__box table {
   text-align: left;
   margin: 10px auto;
   border-collapse: collapse;
 }
 
-#technique .tech-content .tech-box table tr {
+#tech .tech__content .tech__box table tr {
   height: 10px;
 }
 
-#technique .tech-content .tech-box table td {
+#tech .tech__content .tech__box table td {
   padding: 10px;
   text-align: left;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
 
-#technique .tech-content .tech-box table td:nth-child(1) {
+#tech .tech__content .tech__box table td:nth-child(1) {
   text-align: center;
-  width: 200px;
+  width: 150px;
   background-color: lightgray;
 }
 
-#technique .tech-content .tech-box table td:nth-child(2) {
-  text-align: center;
-  width: 50px;
-}
-
-#technique .tech-content .tech-box table td:nth-child(3) {
+#tech .tech__content .tech__box table td:nth-child(2) {
   text-align: left;
-  width: 400px;
+  max-width: 600px;
 }
 
-#others .others-acd {
+#others .others__acd {
   margin: auto;
   width: 60%;
   list-style: none;
   padding-left: 0px;
 }
 
-#others .others-acd li {
+#others .others__acd li {
   margin: 10px 0;
 }
 
@@ -195,7 +208,7 @@ p {
 #others .acd-content ul {
   margin: 0px auto;
   text-align: left;
-  max-width: 30%;
+  max-width: 50%;
 }
 
 #others #research ul {

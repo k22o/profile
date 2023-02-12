@@ -1,0 +1,36 @@
+a {
+    text-decoration: none;   
+}
+
+.headerTitle {
+    background-image: url("../img/header.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 15vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: white;
+        font-size: 3em;
+    }
+}
+
+.menu {
+    table {
+        width: 90%;
+        margin: 20px auto 40px auto;
+        border-collapse: collapse;
+        table-layout: fixed;
+
+        a {
+            color: black;
+            padding: 5px;
+            font-size: 1.0em;
+            cursor: pointer;
+        }
+    }
+}
